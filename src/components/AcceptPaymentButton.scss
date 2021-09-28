@@ -1,0 +1,40 @@
+.AcceptPaymentButton {
+  p {
+    width: 100%;
+    text-align: right;
+  }
+  
+  button {
+    position: relative;
+    bottom: 0.15em;
+    margin: 0.5rem;
+    border: none;
+    box-shadow: 0 0 4px black;
+    padding: .3em;
+    border-radius: .2em;
+    cursor: pointer;
+    }
+  
+  .accept-payment {
+    background: #0069D9;
+    color: white;
+  
+    &:active {
+      background: #0260c4;
+      transform: scaleX(0.97) scaleY(0.95);
+    }
+  }
+  
+  .cancel-payment {
+    background: #d90000;
+    color: white;
+  
+    &:active {
+      background: #d10101;
+      transform: scaleX(0.97) scaleY(0.95);
+    }
+  }
+
+}
+
+

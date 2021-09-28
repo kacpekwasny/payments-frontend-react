@@ -1,0 +1,45 @@
+.PaymentList {
+  margin: 3rem auto;
+  padding-top: 0.5rem;
+  padding-bottom: .5rem;
+
+  border-radius: 1rem;
+  background-color: #f2f2f3;
+  box-shadow: 0 0 10px black;
+
+  width: 600px;
+  max-width: 85%;
+
+  
+  
+  header {
+    text-align: center;
+    color: black;
+  }
+  
+  ul {
+    max-height: 55vh;
+    list-style: none;
+    
+    overflow-y: scroll;
+    margin: .5rem;
+    padding: 0.5rem;
+    padding-right: 0;
+    border-radius: 8px;
+
+    box-shadow: inset 0 0  10px black;
+  }
+
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 128, 128);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;  
+  }
+  
+  ul::-webkit-scrollbar {
+    width: 16px;
+  }
+
+}

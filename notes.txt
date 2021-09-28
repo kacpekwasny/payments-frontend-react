@@ -1,0 +1,9 @@
+
+button accept payment directly sends an accept http update
+
+
+~ ~ Endpoints moved to go/src/github.com/kacpekwasny/payments-react-backend/plan
+
+
+
+

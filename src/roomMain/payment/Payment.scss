@@ -1,0 +1,57 @@
+.user {
+  text-align: left;
+}
+
+.UserPayment {
+  border: 2px solid #63b47c;
+}
+
+.EventPayment {
+  border: 2px solid #3ca4ff;
+}
+
+.Border {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 3px 0.3rem;
+}
+
+.Payment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grn {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.newly-accepted {
+  animation-name: newly-accepted-anim;
+  animation-duration: .5s;
+  animation-iteration-count: 5;
+}
+
+@keyframes newly-accepted-anim {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+.users-ammount-eventpay {
+
+}
+
+.from-to-userpay {
+
+}

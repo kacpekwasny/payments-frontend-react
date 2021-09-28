@@ -1,0 +1,11 @@
+{
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "editor.tabSize": 2
+}
