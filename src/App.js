@@ -58,6 +58,10 @@ export default class App extends Component {
 
   async handleRes(res) {
     const js = await res.json();
+    if (js.err_code === 10) {
+      window.location = '/login';
+      return false;
+    }
     if (js.err_code !== 0) {
       console.error(js);
       return false;
@@ -126,6 +130,8 @@ export default class App extends Component {
         usersRole: js.users_role,
         amAdmin: js.am_admin,
       });
+    } else if (js.err_code === 10) {
+      window.location = '/login';
     } else {
       console.error(js);
     }
@@ -140,6 +146,8 @@ export default class App extends Component {
       this.setState({
         myRooms: js.my_rooms,
       });
+    } if (js.err_code === 10) {
+      window.location = '/login';
     } else {
       console.error(js);
     }
@@ -257,6 +265,9 @@ export default class App extends Component {
     if (js.err_code === 0) {
       this.apiGetMyRooms();
     }
+    if (js.err_code === 10) {
+      window.location = '/login';
+    }
   }
 
   async apiLeaveRoom(roomLink) {
@@ -268,6 +279,9 @@ export default class App extends Component {
     const js = await res.json();
     if (js.err_code === 0) {
       this.apiGetMyRooms();
+    }
+    if (js.err_code === 10) {
+      window.location = '/login';
     }
   }
 
