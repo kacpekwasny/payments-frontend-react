@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/payments/room/static/css/main.6d53e875.chunk.css",
-    "main.js": "/payments/room/static/js/main.807a4272.chunk.js",
-    "main.js.map": "/payments/room/static/js/main.807a4272.chunk.js.map",
+    "main.js": "/payments/room/static/js/main.3609c074.chunk.js",
+    "main.js.map": "/payments/room/static/js/main.3609c074.chunk.js.map",
     "runtime-main.js": "/payments/room/static/js/runtime-main.7b483678.js",
     "runtime-main.js.map": "/payments/room/static/js/runtime-main.7b483678.js.map",
     "static/js/2.f9c585e5.chunk.js": "/payments/room/static/js/2.f9c585e5.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.7b483678.js",
     "static/js/2.f9c585e5.chunk.js",
     "static/css/main.6d53e875.chunk.css",
-    "static/js/main.807a4272.chunk.js"
+    "static/js/main.3609c074.chunk.js"
   ]
 }
