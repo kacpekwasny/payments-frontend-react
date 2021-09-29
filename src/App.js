@@ -17,6 +17,13 @@ import { getck } from './libs/cookies/funcs';
 
 import './App.scss';
 
+function checkUnAuth(errCode) {
+  if (errCode === 10) {
+    sessionStorage.setItem('redirect_to', window.location.pathname);
+    window.location = '/login';
+  }
+}
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -58,10 +65,7 @@ export default class App extends Component {
 
   async handleRes(res) {
     const js = await res.json();
-    if (js.err_code === 10) {
-      window.location = '/login';
-      return false;
-    }
+    checkUnAuth(js.err_code);
     if (js.err_code !== 0) {
       console.error(js);
       return false;
@@ -119,6 +123,7 @@ export default class App extends Component {
   async apiGetRoomData() {
     const res = await fetch(`${this.API_URL}/get/room-data/${this.roomLink}/${this.username}/${this.token}`);
     const js = await res.json();
+    checkUnAuth(js.err_code);
     if (js.err_code === 0) {
       this.setState({
         pendingPayments: js.pending_payments,
@@ -130,8 +135,6 @@ export default class App extends Component {
         usersRole: js.users_role,
         amAdmin: js.am_admin,
       });
-    } else if (js.err_code === 10) {
-      window.location = '/login';
     } else {
       console.error(js);
     }
@@ -141,13 +144,11 @@ export default class App extends Component {
     console.log('this', this);
     const res = await fetch(`${this.API_URL}/get/my-rooms/${this.username}/${this.token}`);
     const js = await res.json();
-    console.log('my_rooms', js);
+    checkUnAuth(js.err_code);
     if (js.err_code === 0) {
       this.setState({
         myRooms: js.my_rooms,
       });
-    } if (js.err_code === 10) {
-      window.location = '/login';
     } else {
       console.error(js);
     }
@@ -262,11 +263,9 @@ export default class App extends Component {
       method: 'POST',
     });
     const js = await res.json();
+    checkUnAuth(js.err_code);
     if (js.err_code === 0) {
       this.apiGetMyRooms();
-    }
-    if (js.err_code === 10) {
-      window.location = '/login';
     }
   }
 
@@ -277,11 +276,9 @@ export default class App extends Component {
       method: 'POST',
     });
     const js = await res.json();
+    checkUnAuth(js.err_code);
     if (js.err_code === 0) {
       this.apiGetMyRooms();
-    }
-    if (js.err_code === 10) {
-      window.location = '/login';
     }
   }
 
